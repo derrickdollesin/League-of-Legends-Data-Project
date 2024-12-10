@@ -36,6 +36,8 @@
     frameborder="0"
 ></iframe>
 
+# Assessment of Missingness
+
 <iframe
     src="League-of-Legends-Data-Project\plots\plot_6.html"
     width="800"
@@ -43,12 +45,17 @@
     frameborder="0"
 ></iframe>
 
+# Hypothesis Testing
+
 <iframe
     src="League-of-Legends-Data-Project\plots\plot_7.html"
     width="800"
     height="600"
     frameborder="0"
 ></iframe>
+
+# Framing a Prediction Problem
+
 <iframe
     src="League-of-Legends-Data-Project\plots\plot_8.html"
     width="800"
@@ -77,12 +84,16 @@
     frameborder="0"
 ></iframe>
 
+# Baseline Model
+
 <iframe
     src="League-of-Legends-Data-Project\plots\plot_12.html"
     width="800"
     height="600"
     frameborder="0"
 ></iframe>
+
+# Final Model
 
 <iframe
     src="League-of-Legends-Data-Project\plots\plot_13.html"
