@@ -16,7 +16,7 @@ The central question I am interested in is: ***How much of an impact does the vi
 In order to compress the amount of data present in the raw dataframe, I only took relevant columns which I would use for analysis. These include: league, position, visionscore, gamelength, result, total cs, csat15, csat25, killsat25, assistsat25, deathsat25.
 
 <ul>
-    <li>League</li>
+    <li>***League***: Competitive league which data was pulled from.</li>
     <li>Position: Role played by players.</li>
     <li>Visionscore: Effectiveness of vision placement.</li>
     <li>Gamelength: Duration of the match in minutes.</li>
