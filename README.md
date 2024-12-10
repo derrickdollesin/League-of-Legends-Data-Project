@@ -9,7 +9,7 @@ The professional data set that I will be working with was created by Oracle's El
 In League of Legends (LOL), the "***visionscore***" has to do with "wards" placed by players around the map. These "wards" grant vision to areas of the map otherwise hidden to player view. Controlling more vision of the map allows for players to track enemy movement and obtain positional advantages against their enemies. "***Creep score***" is the number of minions and jungle monsters killed by a champion. These kills generate gold for players which allow them to get ahead of their opponents through bought items.|
 <br>
 <br>
-The central question I am interested in is: ***How much of an impact does the vision and creep score statline have on the other gaming metrics in the dataset?*** 
+The central question I am interested in is: ***How much of an impact does the vision and creep score statline have on the other gaming metrics in the LCK?*** 
 
 # Data Cleaning and Exploratory Data Analysis
 
@@ -17,18 +17,16 @@ In order to compress the amount of data present in the raw dataframe, I only too
 
 <ul>
     <li>League</li>
-    <li>Position</li>
-    <li>Visionscore</li>
-    <li>Gamelength</li>
-    <li>Result</li>
-    <li>Total CS</li>
-    <li>CS at 15</li>
-    <li>CS at 25</li>
-    <li>Kills at 25</li>
-    <li>Deaths at 25</li>
-    <li>Assists at 25</li>
-    <li>Deaths at 25</li>
-    <li>is_25</li>
+    <li>Position: Role played by players.</li>
+    <li>Visionscore: Effectiveness of vision placement.</li>
+    <li>Gamelength: Duration of the match in minutes.</li>
+    <li>Result: Win or loss (coded as 1 or 0).</li>
+    <li>Total CS: Total minion and monster kills.</li>
+    <li>CS at 15/25: Creep score at 15 and 25 minutes.</li>
+    <li>Kills at 25: Total kills at 25 minutes.</li>
+    <li>Deaths at 25: Total Deaths at 25 minutes.</li>
+    <li>Assists at 25: Total Assists at 25 minutes.</li>
+    <li>is_25: Boolean true or false if the game lasted 25 minutes.</li>
 </ul>
 
 <h5>Support DataFrame</h5>
