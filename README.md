@@ -1,7 +1,7 @@
 <body>
   <h3>Introduction</h3>
   <h3>Data Cleaning and Exploratory Data Analysis</h3>
-    <iframe
+<iframe
     src="\plots\plot_1.html"
     width="800"
     height="600"
