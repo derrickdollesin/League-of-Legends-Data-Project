@@ -10,7 +10,7 @@
 </body>
 
 <iframe
-    src="assests/plot_1.html"
+    src="plots/plot_1.html"
     width="800"
     height="600"
     frameborder="0"
