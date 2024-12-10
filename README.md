@@ -28,6 +28,7 @@ In order to compress the amount of data present in the raw dataframe, I only too
     <li>Deaths at 25</li>
     <li>Assists at 25</li>
     <li>Deaths at 25</li>
+    <li>is_25</li>
 </ul>
 
 <h5>Support DataFrame</h5>
