@@ -16,17 +16,17 @@ The central question I am interested in is: ***How much of an impact does the vi
 In order to compress the amount of data present in the raw dataframe, I only took relevant columns which I would use for analysis. These include: league, position, visionscore, gamelength, result, total cs, csat15, csat25, killsat25, assistsat25, deathsat25.
 
 <ul>
-    <li>***League***: Competitive league which data was pulled from.</li>
-    <li>Position: Role played by players.</li>
-    <li>Visionscore: Effectiveness of vision placement.</li>
-    <li>Gamelength: Duration of the match in minutes.</li>
-    <li>Result: Win or loss (coded as 1 or 0).</li>
-    <li>Total CS: Total minion and monster kills.</li>
-    <li>CS at 15/25: Creep score at 15 and 25 minutes.</li>
-    <li>Kills at 25: Total kills at 25 minutes.</li>
-    <li>Deaths at 25: Total Deaths at 25 minutes.</li>
-    <li>Assists at 25: Total Assists at 25 minutes.</li>
-    <li>is_25: Boolean true or false if the game lasted 25 minutes.</li>
+    <li><b>League</b>: Competitive league which data was pulled from.</li>
+    <li><b>Position</b>: Role played by players.</li>
+    <li><b>Visionscore</b>: Effectiveness of vision placement.</li>
+    <li><b>Gamelength</b>: Duration of the match in minutes.</li>
+    <li><b>Result</b>: Win or loss (coded as 1 or 0).</li>
+    <li><b>Total CS</b>: Total minion and monster kills.</li>
+    <li><b>CS at 15/25</b>: Creep score at 15 and 25 minutes.</li>
+    <li><b>Kills at 25</b>: Total kills at 25 minutes.</li>
+    <li><b>Deaths at 25</b>: Total Deaths at 25 minutes.</li>
+    <li><b>Assists at 25</b>: Total Assists at 25 minutes.</li>
+    <li><b>is_25</b>: Boolean true or false if the game lasted 25 minutes.</li>
 </ul>
 
 <h5>Support DataFrame</h5>
