@@ -2,7 +2,7 @@
   <h3>Introduction</h3>
   <h3>Data Cleaning and Exploratory Data Analysis</h3>
     <iframe
-    src="C:\Users\DerDo\Desktop\dsc80-final\League-of-Legends-Data-Project\plots\plot_1.html"
+    src="\plots\plot_1.html"
     width="800"
     height="600"
     frameborder="0"
