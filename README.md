@@ -13,9 +13,24 @@ The central question I am interested in is: ***How much of an impact does the vi
 
 # Data Cleaning and Exploratory Data Analysis
 
-<h5>Support DataFrame</h5>
+In order to compress the amount of data present in the raw dataframe, I only took relevant columns which I would use for analysis. These include: league, position, visionscore, gamelength, result, total cs, csat15, csat25, killsat25, assistsat25, deathsat25.
 
-<body></body>
+<ul>
+    <li>League</li>
+    <li>Position</li>
+    <li>Visionscore</li>
+    <li>Gamelength</li>
+    <li>Result</li>
+    <li>Total CS</li>
+    <li>CS at 15</li>
+    <li>CS at 25</li>
+    <li>Kills at 25</li>
+    <li>Deaths at 25</li>
+    <li>Assists at 25</li>
+    <li>Deaths at 25</li>
+</ul>
+
+<h5>Support DataFrame</h5>
 
 | league   | position   |   visionscore |   gamelength |   result |   total cs |   csat15 |   csat25 |   killsat25 |   assistsat25 |   deathsat25 | is_25   |
 |:---------|:-----------|--------------:|-------------:|---------:|-----------:|---------:|---------:|------------:|--------------:|-------------:|:--------|
