@@ -38,7 +38,6 @@ These procedures made sure the dataset was precise, comprehensive, and concentra
 <br>
 <br>
 Support DataFrame
-<br>
 
 | league   | position   |   visionscore |   gamelength |   result |   total cs |   csat15 |   csat25 |   killsat25 |   assistsat25 |   deathsat25 | is_25   |
 |:---------|:-----------|--------------:|-------------:|---------:|-----------:|---------:|---------:|------------:|--------------:|-------------:|:--------|
@@ -47,6 +46,7 @@ Support DataFrame
 | LCK      | sup        |            82 |         2070 |        0 |         40 |       31 |       34 |           1 |             1 |            1 | True    |
 | LCK      | sup        |           101 |         2070 |        1 |         41 |       21 |       35 |           0 |             1 |            0 | True    |
 | LCK      | sup        |           112 |         2233 |        1 |         30 |        9 |       21 |           1 |             4 |            2 | True    |
+
 <br>
 <br>
 The distribution of Creep Score at 25 minutes (csat25) for LCK league support players is displayed in the first plot. To show the spread and possible outliers in the data, a box plot has been added above the histogram, which depicts the distribution as a whole. Since support players usually concentrate on map control and vision rather than farming, it is not surprising that most of them have lower csat25s.
