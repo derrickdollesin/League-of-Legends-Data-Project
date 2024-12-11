@@ -280,3 +280,31 @@ An MSE of 930.73 indicates that the model's predictions have a significant amoun
 
 # Fairness Analysis
 
+<p><strong>Choice of Groups:</strong></p>
+<p><strong>Group X (Losses):</strong> This group includes all the instances where the result is a loss (0). It is selected from the dataset using <code>support_data['result'] == 0</code>.</p>
+<p><strong>Group Y (Wins):</strong> This group includes all the instances where the result is a win (1). It is selected from the dataset using <code>support_data['result'] == 1</code>.</p>
+
+<p><strong>Evaluation Metric:</strong></p>
+<p>The evaluation metric used is the <strong>Mean Squared Error (MSE)</strong>, which is a common metric for regression tasks. It measures the average squared difference between the predicted and actual values. Lower MSE indicates better model performance.</p>
+
+<p><strong>Null and Alternative Hypotheses:</strong></p>
+<ul>
+    <li><strong>Null Hypothesis (H₀):</strong> There is no significant difference in MSE between losses and wins.</li>
+    <li><strong>Alternative Hypothesis (H₁):</strong> There is a significant difference in MSE between losses and wins.</li>
+</ul>
+
+<p><strong>Test Statistic:</strong></p>
+<p>The test statistic is the difference in MSE between the losses group (Group X) and the wins group (Group Y). We perform a permutation test to assess the statistical significance of this difference.</p>
+
+<p><strong>Significance Level:</strong></p>
+<p>The significance level is set at 0.05, meaning we will reject the null hypothesis if the p-value is less than 0.05.</p>
+
+<p><strong>Results:</strong></p>
+<ul>
+    <li><strong>MSE for Losses:</strong> 88.38</li>
+    <li><strong>MSE for Wins:</strong> 121.28</li>
+    <li><strong>P-value from Permutation Test:</strong> 1.0</li>
+</ul>
+
+<p><strong>Conclusion:</strong></p>
+<p>Since the p-value is 1.0, which is greater than 0.05, we fail to reject the null hypothesis. Therefore, we conclude that there is no significant difference in the MSE between the losses and wins groups in our dataset.</p>
