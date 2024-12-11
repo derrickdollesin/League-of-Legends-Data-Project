@@ -118,10 +118,21 @@ The distribution of the mean differences in gamelength for missing and non-missi
 <p><strong>Null Hypothesis (H₀):</strong> Higher csat15 score does not result in a win.</p>
 <p><strong>Alternative Hypothesis (H₁):</strong> Higher csat15 score results in a win.</p>
 
+In order to compare the means of csat15 between games that ended in a win (result = 1) and games that ended in a loss (result = 0), I used a two-sample t-test. Since the assumption of unequal variances was taken into consideration and we are comparing the means of two independent groups, this test is appropriate (thus, employing Welch's t-test). A significance threshold of 0.05 was established.
+
 <h2>Results:</h2>
 <p><strong>T-statistic:</strong> 5.80</p>
 <p><strong>P-value:</strong> 8.99e-09</p>
 
+<br>
+<br>
+We reject the null hypothesis in favor of the alternative hypothesis since the p-value is less than 0.05. This indicates that there is enough data to imply that a higher csat15 score corresponds to a higher chance of winning.
+<br>
+<br>
+Conclusion: Better creep scores early in the game can help a team win, as the t-test result confirms that higher csat15 scores are substantially connected with winning games. It is crucial to remember that other factors may also affect game outcomes, therefore this does not prove a cause-and-effect relationship.
+<br>
+<br>
+Visualization: The distribution of csat15 scores for wins and losses is displayed in the histogram below. The overlay shows that, in comparison to losing games, winning games typically have better csat15 scores.
 
 <iframe
     src="plots/plot_7.html"
