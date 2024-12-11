@@ -101,7 +101,7 @@ There is a significant correlation between the two variables, as evidenced by th
 More information could be helpful to better understand the nature of this missingness and possibly turn it into MAR (Missing at Random). For instance, the absence of csat25 in some games may be explained by game metadata like match type, player behavior, or other in-game occurrences. It would be possible to treat missingness more accurately and get a better understanding of the mechanisms underlying the missing data if these variables were gathered.
 <br>
 <br>
-***Permutation Test Plot**
+***Permutation Test Plot***
 <iframe
     src="plots/plot_6.html"
     width="800"
@@ -113,6 +113,15 @@ More information could be helpful to better understand the nature of this missin
 The distribution of the mean differences in gamelength for missing and non-missing csat25 values from 1,000 permutations is displayed in the histogram below. The observed difference in means, 729.36, is shown by the red dashed line. The conclusion that the missingness in csat25 is NMAR is supported by the p-value of 0.0, which shows that the observed difference is significantly different from the simulated differences.
 
 # Hypothesis Testing
+
+<h2>Hypotheses:</h2>
+<p><strong>Null Hypothesis (H₀):</strong> Higher csat15 score does not result in a win.</p>
+<p><strong>Alternative Hypothesis (H₁):</strong> Higher csat15 score results in a win.</p>
+
+<h2>Results:</h2>
+<p><strong>T-statistic:</strong> 5.80</p>
+<p><strong>P-value:</strong> 8.99e-09</p>
+
 
 <iframe
     src="plots/plot_7.html"
