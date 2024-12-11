@@ -12,7 +12,7 @@ In League of Legends (LOL), the "***visionscore***" has to do with "wards" place
 The central question I am interested in is: ***How much of an impact does the vision and creep score for support players have on the other gaming metrics in the LCK?*** 
 <br>
 <br>
-In order to compress the amount of data present in the raw dataframe, I only took relevant columns which I would use for analysis. These include: league, position, visionscore, gamelength, result, total cs, csat15, csat25, killsat25, assistsat25, deathsat25. Additionally, I chose to analyze data from the LCK, specifically the support role. In the original raw dataframe, there were 150180 rows and 161 columns. After reduction, there were 934 rows and 12 columns. 
+In the original dataset there are around 150180 rows. The rows which I decided to keep to analyze include: league, position, visionscore, gamelength, result, total cs, csat15, csat25, killsat25, assistsat25, deathsat25.
 <br>
 <ul>
     <li><b>League</b>: Competitive league which data was pulled from.</li>
@@ -29,11 +29,15 @@ In order to compress the amount of data present in the raw dataframe, I only too
 </ul>
 
 # Data Cleaning and Exploratory Data Analysis
-
-Support DataFrame
-
 <br>
-
+The goal of the data cleaning procedure was to improve the dataset so that it could be utilized to examine LCK league support players. To ensure that the analysis was league-specific, the data was first filtered to only contain rows with the league set to 'LCK'. To facilitate time-based operations, the date column was transformed into a datetime format, and rows with incomplete data (designated by datacompleteness) were eliminated. To make the dataset more manageable, the url column—which had no bearing on the analysis—was removed. By filtering for the'sup' position, the focus was then reduced to players who were supporting roles. To make subgroup comparisons easier, a new column, is_25, was introduced to indicate whether the game lasted more than 25 minutes. Lastly, the dataset's complexity was decreased by retaining only pertinent columns (such as visionscore, gamelength, outcome, csat25, etc.).
+<br>
+<br>
+These procedures made sure the dataset was precise, comprehensive, and concentrated on the relevant elements of gaming. The data was made more digestible and suitable for in-depth research by separating the LCK league, concentrating on support players, and include crucial indicators for game duration. Now that the dataset had been cleaned, it could be examined using statistical tests and visualizations to reveal how various elements, such game length and result, affected support players' performance in the LCK competition.
+<br>
+<br>
+Support DataFrame
+<br>
 | league   | position   |   visionscore |   gamelength |   result |   total cs |   csat15 |   csat25 |   killsat25 |   assistsat25 |   deathsat25 | is_25   |
 |:---------|:-----------|--------------:|-------------:|---------:|-----------:|---------:|---------:|------------:|--------------:|-------------:|:--------|
 | LCK      | sup        |           115 |         2195 |        0 |         36 |       11 |       22 |           1 |             3 |            0 | True    |
@@ -41,7 +45,14 @@ Support DataFrame
 | LCK      | sup        |            82 |         2070 |        0 |         40 |       31 |       34 |           1 |             1 |            1 | True    |
 | LCK      | sup        |           101 |         2070 |        1 |         41 |       21 |       35 |           0 |             1 |            0 | True    |
 | LCK      | sup        |           112 |         2233 |        1 |         30 |        9 |       21 |           1 |             4 |            2 | True    |
-
+<br>
+<br>
+The distribution of Creep Score at 25 minutes (csat25) for LCK league support players is displayed in the first plot. To show the spread and possible outliers in the data, a box plot has been added above the histogram, which depicts the distribution as a whole. Since support players usually concentrate on map control and vision rather than farming, it is not surprising that most of them have lower csat25s.
+<br>
+<br>
+In the second, the csat25 distribution is compared according to whether the game lasted longer than twenty-five minutes (is_25). This overlay histogram shows that longer games typically result in greater creep scores, indicating that players have more time to farm throughout longer game durations. But the distributions' overlap suggests that there are other factors besides game length.
+<br>
+<br>
 <iframe
     src="plots/plot_1.html"
     width="800"
@@ -55,21 +66,11 @@ Support DataFrame
     height="600"
     frameborder="0"
 ></iframe>
-
-<iframe
-    src="plots/plot_3.html"
-    width="800"
-    height="600"
-    frameborder="0"
-></iframe>
-
-<iframe
-    src="plots/plot_4.html"
-    width="800"
-    height="600"
-    frameborder="0"
-></iframe>
-
+<br>
+<br>
+Color-coded by game outcome (result), the scatter figure shows the correlation between game time (gamelength) and creep score at 25 minutes (csat25). We can see from the plot that the csat25 tends to rise with game length, indicating greater farming chances for participants. According to the data, support players who win games typically have a somewhat better csat25 than those who lose. Although the correlation is weak, suggesting that other factors also affect their success, this pattern implies that longer games and victory may offer support players more opportunities to accumulate farm.
+<br>
+<br>
 <iframe
     src="plots/plot_5.html"
     width="800"
