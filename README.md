@@ -141,6 +141,32 @@ Visualization: The distribution of csat15 scores for wins and losses is displaye
 
 # Framing a Prediction Problem
 
+The prediction problem involves predicting the vision score (visionscore) of a support player at the end of a game. This is a regression problem since the target variable, visionscore, is a continuous numerical value.
+<br>
+<br>
+***Response Variable***
+<br>
+<br>
+Since this is the metric we are interested in forecasting, the response variable is the final vision score. In League of Legends, the vision score is crucial since it shows how the player contributes to map awareness and strategic control, both of which can affect the game's outcome.
+<br>
+<br>
+***Evaluation Metric***
+<br>
+<br>
+Mean Squared Error (MSE) or Mean Absolute Error (MAE) could be used as the evaluation metric to gauge the model's performance. Because they concentrate on the model's capacity to forecast a continuous numerical variable, these measures are suitable. Because MAE displays the average error in the same units as the goal variable (vision score), it is easier to read. Since metrics like accuracy and F1-score are better suited for classification jobs rather than regression, I went with MAE instead.
+<br>
+<br>
+***Information at the Time of Prediction***
+<br>
+<br>
+Certain variables, such the game's duration, outcome (win or lose), and whether it lasted more than 25 minutes, would be available to us at the time of projection. Only in-game features available during the match should be used for prediction, as we would not have access to post-game statistics or future game outcomes.
+<br>
+<br>
+***Justification for Feature Selection***
+<br>
+<br>
+Because they offer information that may affect the eyesight score during a match, we are using features such game length, game outcome, and if the game lasts more than 25 minutes. Other components should be left out since they wouldn't be accessible during prediction time, like final results or statistics after a game.
+
 <iframe
     src="plots/plot_8.html"
     width="800"
