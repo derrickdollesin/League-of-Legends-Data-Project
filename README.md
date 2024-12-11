@@ -197,6 +197,31 @@ Because they offer information that may affect the eyesight score during a match
 
 # Baseline Model
 
+***Model Description***
+<br>
+<br>
+The model used in this analysis is a Linear Regression model. It is trained to predict the vision score (visionscore) of a support player at the end of a game based on three features:
+
+<p><strong>killsat25</strong> (Quantitative): The number of kills a support player has at 25 minutes.</p>
+<p><strong>assistsat25</strong> (Quantitative): The number of assists a support player has at 25 minutes.</p>
+<p><strong>is_25</strong> (Nominal): A binary feature indicating whether the game lasted more than 25 minutes.</p>
+
+<br>
+<br>
+***Data Preprocessing and Encoding***
+<br>
+<br>
+Numerical Features: Killsat25 and Assistsat25 are numerical (quantitative) characteristics that are scaled using StandardScaler to guarantee that their scales are comparable for the model after being preprocessed using SimpleImputer to fill in any missing values with the mean.
+<br>
+<br>
+Categorical Features: OneHotEncoder is used to encode the is_25 feature, which is categorical (nominal) and produces a binary feature (whether or not the game lasted more than 25 minutes). In order to prevent multicollinearity, we exclude the first category.
+<br>
+<br>
+To guarantee correct handling of the data during training and testing, these preprocessing processes are carried out inside a ColumnTransformer, and both preprocessing and the model training phases are incorporated into a Pipeline.
+<br>
+<br>
+***Model Performance***
+
 <iframe
     src="plots/plot_12.html"
     width="800"
@@ -204,7 +229,45 @@ Because they offer information that may affect the eyesight score during a match
     frameborder="0"
 ></iframe>
 
+performance of the model was evaluated using Mean Squared Error (MSE), which measures the average squared difference between the actual and predicted vision scores. The baseline model's MSE is 930.73.
+<br>
+<br>
+***Is the Model "Good"?***
+<br>
+<br>
+An MSE of 930.73 indicates that the model's predictions have a significant amount of error, even though the model has attained an MSE value, which helps evaluate its prediction accuracy. The use case in question and the anticipated level of prediction accuracy determine whether this model is "good" or not. Additional enhancements to this model might include investigating more intricate models (such decision trees or random forests) or adding features that could more accurately predict vision score, such as player champion type or in-game events that impact vision score. Additionally, assessing additional metrics like R-squared may offer additional understanding of the model's functionality.
+
 # Final Model
+
+***Features Added***
+<ul>
+    <li><strong>creep_score_per_minute</strong>: This feature calculates the number of creeps (minions and monsters) killed per minute. This is a good feature for the prediction task because it reflects a player's ability to manage the map and participate in key objectives, which influences their overall contribution to the game and their vision score.</li>
+    <li><strong>cumulative_kda_at_25</strong>: This feature represents a player's cumulative KDA (Kills + Assists - Deaths) at 25 minutes. It helps measure a player’s performance, indicating their impact in terms of kills and deaths, which is relevant to the vision score.</li>
+</ul>
+
+***Modeling Algorithm***
+
+<p>I used a <strong>RandomForestRegressor</strong> for predicting the vision score. Random forests are a versatile and powerful ensemble learning method, which works well for regression tasks with multiple features, such as the ones in this dataset. They can capture complex relationships and interactions between features.</p>
+
+***Hyperparameters***
+
+<ul>
+    <li><strong>n_estimators</strong>: The number of trees in the forest. The best performing values were 100 and 200.</li>
+    <li><strong>max_depth</strong>: The maximum depth of the tree. The optimal values were 10, 15, and 20.</li>
+    <li><strong>min_samples_split</strong>: The minimum number of samples required to split an internal node. Values of 2 and 5 were tested.</li>
+    <li><strong>min_samples_leaf</strong>: The minimum number of samples required to be at a leaf node. The values tested were 1 and 2.</li>
+</ul>
+
+***Hyperparameter Selection***
+<p>Hyperparameters were selected using <strong>GridSearchCV</strong> with cross-validation. This method tested all combinations of the hyperparameter grid and selected the best combination based on model performance.</p>
+
+***Model Performance***
+
+<p>The final model achieved a Mean Squared Error (MSE) of <strong>263.57</strong>, which is a significant improvement over the baseline model's MSE of <strong>930.73</strong>. This indicates that the RandomForest model, after fine-tuning, was able to predict the vision score much more accurately.</p>
+
+***Visualization***
+
+<p>Below is a scatter plot of the actual vs predicted vision scores, with a red dashed line representing the ideal prediction (where actual equals predicted). This plot visually demonstrates the accuracy of the final model:</p>
 
 <iframe
     src="plots/plot_13.html"
@@ -214,4 +277,6 @@ Because they offer information that may affect the eyesight score during a match
 ></iframe>
 
 
+
+# Fairness Analysis
 
