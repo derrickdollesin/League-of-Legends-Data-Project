@@ -13,7 +13,8 @@ The central question I am interested in is: ***How much of an impact does the vi
 <br>
 <br>
 In order to compress the amount of data present in the raw dataframe, I only took relevant columns which I would use for analysis. These include: league, position, visionscore, gamelength, result, total cs, csat15, csat25, killsat25, assistsat25, deathsat25. Additionally, I chose to analyze data from the LCK, specifically the support role. In the original raw dataframe, there were 150180 rows and 161 columns. After reduction, there were 934 rows and 12 columns. 
-
+<br>
+<br>
 <ul>
     <li><b>League</b>: Competitive league which data was pulled from.</li>
     <li><b>Position</b>: Role played by players.</li>
