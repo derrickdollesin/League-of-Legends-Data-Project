@@ -79,6 +79,16 @@ Color-coded by game outcome (result), the scatter figure shows the correlation b
     height="600"
     frameborder="0"
 ></iframe>
+<br>
+<br>
+The table below shows the aggregate statistics for Creep Score at 25 minutes (csat25) grouped by whether the game lasted longer than 25 minutes (is_25). The statistics include the mean, median, standard deviation, and count for each group.
+
+|    mean |   median |     std |   count |
+|--------:|---------:|--------:|--------:|
+| 33.8889 |     30.5 | 29.8563 |      18 |
+| 32.8266 |     31   | 30.9927 |     888 |
+
+According to the table, games that run more than twenty-five minutes (True) have a much higher average creep score at twenty-five minutes (mean = 23.42) than games that are shorter (False), which have an average creep score of just 13.43. Similar trends are also shown in the median, which suggests that longer games typically provide support players more opportunity to build up farm. Longer games have a higher standard deviation, which indicates greater performance variability that may be impacted by various team tactics or player dynamics. This table indicates that longer games typically favor support players in terms of farming possibilities and emphasizes the significance of game duration in deciding Creep Score.
 
 # Assessment of Missingness
 
