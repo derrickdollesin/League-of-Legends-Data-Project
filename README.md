@@ -30,7 +30,9 @@ In order to compress the amount of data present in the raw dataframe, I only too
 
 # Data Cleaning and Exploratory Data Analysis
 
-<h5>Support DataFrame</h5>
+Support DataFrame
+
+<br>
 
 | league   | position   |   visionscore |   gamelength |   result |   total cs |   csat15 |   csat25 |   killsat25 |   assistsat25 |   deathsat25 | is_25   |
 |:---------|:-----------|--------------:|-------------:|---------:|-----------:|---------:|---------:|------------:|--------------:|-------------:|:--------|
