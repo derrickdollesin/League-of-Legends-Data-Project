@@ -124,8 +124,6 @@ In order to compare the means of csat15 between games that ended in a win (resul
 <p><strong>T-statistic:</strong> 5.80</p>
 <p><strong>P-value:</strong> 8.99e-09</p>
 
-<br>
-<br>
 We reject the null hypothesis in favor of the alternative hypothesis since the p-value is less than 0.05. This indicates that there is enough data to imply that a higher csat15 score corresponds to a higher chance of winning.
 <br>
 <br>
