@@ -92,12 +92,25 @@ Support players in winning games (when result = 1) typically have a higher avera
 
 # Assessment of Missingness
 
+I draw the conclusion that the csat25 column in the dataset is missing in an NMAR (Not Missing at Random) manner based on the permutation test findings. The p-value of 0.0 indicates a strong rejection of the null hypothesis, which held that the missingness in csat25 was independent of gamelength. The permutation test assessed whether the missingness of csat25 is connected to gamelength. This supports the notion that missingness varies with game length by showing that missing values in csat25 are more likely to occur in games of a particular length.
+<br>
+<br>
+There is a significant correlation between the two variables, as evidenced by the observed difference in mean gamelength of 729.36 between the missing and non-missing csat25 values. The idea that longer or shorter games may be linked to missing data in csat25 is supported by this finding. This could be because of a number of variables, including incomplete game recordings or missing data for specific game lengths.
+<br>
+<br>
+More information could be helpful to better understand the nature of this missingness and possibly turn it into MAR (Missing at Random). For instance, the absence of csat25 in some games may be explained by game metadata like match type, player behavior, or other in-game occurrences. It would be possible to treat missingness more accurately and get a better understanding of the mechanisms underlying the missing data if these variables were gathered.
+<br>
+<br>
+***Permutation Test Plot**
 <iframe
     src="plots/plot_6.html"
     width="800"
     height="600"
     frameborder="0"
 ></iframe>
+<br>
+<br>
+The distribution of the mean differences in gamelength for missing and non-missing csat25 values from 1,000 permutations is displayed in the histogram below. The observed difference in means, 729.36, is shown by the red dashed line. The conclusion that the missingness in csat25 is NMAR is supported by the p-value of 0.0, which shows that the observed difference is significantly different from the simulated differences.
 
 # Hypothesis Testing
 
